@@ -20,5 +20,17 @@ import (
 
 	"github.com/jorquera1401/greetings"
 )
+
+func main() {
+	log.SetPrefix("greetings: ")
+
+	names := []string{"Alex", "Jorge", "Juan"}
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(messages)
+}
+
 ```
 
